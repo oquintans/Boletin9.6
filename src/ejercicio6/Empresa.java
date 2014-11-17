@@ -17,7 +17,14 @@ public class Empresa {
     private int porcent;
 
     public void pedirSueldo() {
-        
+        double s;
+        do {
+            String dato = JOptionPane.showInputDialog("Sueldo");
+            s = Double.parseDouble(dato);
+            if (s < 0) {
+                this.validarDouble();
+            }
+        } while (s != 0);
     }
 
     public double validarDouble() {
