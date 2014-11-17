@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ejercicio6;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Oscar
- */
 public class Empresa {
 
     private int cont1 = 0;
@@ -23,10 +14,10 @@ public class Empresa {
         do {
             String dato = JOptionPane.showInputDialog("Introducir Sueldo " + (cont1 + 1) + " :");
             s = Double.parseDouble(dato);
-            cont1++;
             if (s < 0) {
                 this.validarDouble();
             }
+            cont1++;
         } while (s != 0);
         return s;
     }
@@ -35,7 +26,7 @@ public class Empresa {
 
         double s;
         do {
-            String dato = JOptionPane.showInputDialog("ERROR\nIntroduzca Sueldo");
+            String dato = JOptionPane.showInputDialog("ERROR\nIntroduzca Sueldo " + (cont1 + 1) + " :");
             s = Double.parseDouble(dato);
         } while (s < 0);
         return s;
