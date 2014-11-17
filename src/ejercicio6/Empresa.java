@@ -21,7 +21,7 @@ public class Empresa {
 
         double s;
         do {
-            String dato = JOptionPane.showInputDialog("Sueldo");
+            String dato = JOptionPane.showInputDialog("Introducir Sueldo " + (cont1 + 1) + " :");
             s = Double.parseDouble(dato);
             cont1++;
             if (s < 0) {
@@ -50,13 +50,11 @@ public class Empresa {
         while (sueldo < 1000) {
             cont3++;
         }
-
     }
 
     public void verSueldo() {
-        
-        
-        float porcent = (cont3 * 100)/cont1;
-    }
 
+        float porcent = (cont3 * 100) / cont1;
+        JOptionPane.showMessageDialog(null, "Número de trabajadores con sueldo entre 1000-1750€ : " + cont2 + "\nPorcentaje de trabajadores con sueldo menor de 1000€ : " + porcent);
+    }
 }

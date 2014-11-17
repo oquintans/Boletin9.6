@@ -16,7 +16,8 @@ public class Ejercicio6 {
      */
     public static void main(String[] args) {
         Empresa par=new Empresa();
-        par.pedirSueldo();
+        par.calcular();
+        par.verSueldo();
     }
     
 }
