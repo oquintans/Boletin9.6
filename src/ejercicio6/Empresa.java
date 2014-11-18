@@ -7,6 +7,7 @@ public class Empresa {
     private int cont1 = 0;
     private int cont2 = 0;
     private int cont3 = 0;
+    double sueldo = this.pedirSueldo();
 
     public double pedirSueldo() {
 
@@ -36,12 +37,10 @@ public class Empresa {
 
     public void calcular() {
 
-        double sueldo = this.pedirSueldo();
-
         if (sueldo >= 1000 && sueldo <= 1750) {
             cont2++;
         }
-        if (sueldo < 1000) {
+        if (sueldo < 1000 && sueldo > 0) {
             cont3++;
         }
 
