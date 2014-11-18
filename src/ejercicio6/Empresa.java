@@ -17,7 +17,9 @@ public class Empresa {
             if (s < 0) {
                 this.validarDouble();
             }
-            cont1++;
+            if (s != 0) {
+                cont1++;
+            }
         } while (s != 0);
         return s;
     }
@@ -35,17 +37,19 @@ public class Empresa {
     public void calcular() {
 
         double sueldo = this.pedirSueldo();
-        while (sueldo >= 1000 && sueldo <= 1750) {
+
+        if (sueldo >= 1000 && sueldo <= 1750) {
             cont2++;
         }
-        while (sueldo < 1000) {
+        if (sueldo < 1000) {
             cont3++;
         }
+
     }
 
     public void verSueldo() {
 
         float porcent = (cont3 * 100) / cont1;
-        JOptionPane.showMessageDialog(null, "Número de trabajadores con sueldo entre 1000-1750€ : " + cont2 + "\nPorcentaje de trabajadores con sueldo menor de 1000€ : " + porcent);
+        JOptionPane.showMessageDialog(null, "Número de trabajadores con sueldo entre 1000 y 1750€ : " + cont2 + "\nPorcentaje de trabajadores con sueldo menor de 1000€ : " + porcent + " %");
     }
 }
